@@ -5,12 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DesignPatterns.Creational.Singleton
-{
-    class Program
+{    
+    public class Service
     {
-        static void Main(string[] args)
+        public void Method()
         {
-            new SingletonExample().RunExample();
+            Console.WriteLine("Service.Method() foi chamado.");
         }
     }
 }
