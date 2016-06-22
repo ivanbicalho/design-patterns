@@ -7,7 +7,7 @@
 *.userosscache
 *.sln.docstates
 
-DesignPatterns/
+/DesignPatterns
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
