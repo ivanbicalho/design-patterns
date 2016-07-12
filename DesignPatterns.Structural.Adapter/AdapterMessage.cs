@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace DesignPatterns.Structural.Adapter
 {
-    class Program
+    public class AdapterMessage : LegacyMessage
     {
-        static void Main(string[] args)
+        private NewMessage _adaptee = new NewMessage();
+
+        public override void Show()
         {
-            new AdapterExample().RunExample();
+            _adaptee.Show();
         }
-    }
+    }    
 }
