@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
+using Decorator.Domain;
 
-namespace Decorator
+namespace Decorator.Repository
 {
     public class CustomerRepository : ICustomerRepository
     {

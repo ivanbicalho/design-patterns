@@ -1,10 +1,10 @@
 using System;
-using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
+using Decorator.Domain;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace Decorator
+namespace Decorator.Repository
 {
     public class CachedCustomerRepository : ICustomerRepository
     {
