@@ -1,11 +1,7 @@
 ﻿using System;
-using System.IO;
 using System.Threading.Tasks;
 using Decorator.Repository;
-using Microsoft.Extensions.Caching.Memory;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 
 namespace Decorator
 {
@@ -17,15 +13,15 @@ namespace Decorator
             services.AddScoped<Program>();
             services.AddMemoryCache();
 
-            // adding first the repository
+            // adding the repository first
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             
             // next, adding the decorator
             // will be delivered when ICustomerRepository is requested
             services.Decorate<ICustomerRepository, CachedCustomerRepository>();
             
-            var serviceProvider = services.BuildServiceProvider();
-            await serviceProvider.GetService<Program>()!.RunAsync();
+            var sp = services.BuildServiceProvider();
+            await sp.GetService<Program>()!.RunAsync();
         }
         
         private readonly ICustomerRepository _customerRepository;
@@ -41,7 +37,9 @@ namespace Decorator
             {
                 var customer = await _customerRepository.GetById(1);
                 
+                // LastGet will be refreshed every 3 seconds (cache time)
                 Console.WriteLine($"Customer: {customer.Name}, LastGet: {customer.LastGet}");
+                
                 await Task.Delay(TimeSpan.FromSeconds(1));
             }
         }

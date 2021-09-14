@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Decorator.csproj", "{EA553351-848F-4DED-A302-9253F9DF0C22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChainOfResponsability", "ChainOfResponsability\ChainOfResponsability.csproj", "{F23DFDE0-A208-4A52-8C6B-88A1A8153056}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA553351-848F-4DED-A302-9253F9DF0C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA553351-848F-4DED-A302-9253F9DF0C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA553351-848F-4DED-A302-9253F9DF0C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA553351-848F-4DED-A302-9253F9DF0C22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F23DFDE0-A208-4A52-8C6B-88A1A8153056}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F23DFDE0-A208-4A52-8C6B-88A1A8153056}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F23DFDE0-A208-4A52-8C6B-88A1A8153056}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F23DFDE0-A208-4A52-8C6B-88A1A8153056}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
